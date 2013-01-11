@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "GitHub Diff Whitespace Disabler",
+  "description": "This extension will force GitHub diffs to always ignore whitespace.",
+  "version": "1.0.1",
+
+  "permissions": [
+  "webRequest",
+  "webRequestBlocking", 
+  "*://github.com/"
+  ],
+
+ "background": {
+  	"scripts": ["extension.js"]
+ }
+}
