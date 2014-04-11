@@ -6,7 +6,7 @@ function interceptRequest(request) {
 
 chrome.webRequest.onBeforeRequest.addListener(
   interceptRequest, 
-  { urls: [ '*://github.com/*/commit/*', ] },
+  { urls: [ '*://github.com/*/commit/*', '*://github.com/*/pull/*', ] },
   ['blocking']);
 
 function endsWith(str, suffix) {
