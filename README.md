@@ -2,7 +2,7 @@
 
 Simple Chrome extension to always enable ?w=1 for any page on GitHub showing a diff (commit or pull request).
 
-[**Install via Chrome Web Store**](https://chrome.google.com/webstore/detail/bppopebgnjajocjnjlginjfpjbleappc/publish-delayed)
+[**Install via Chrome Web Store**](https://chrome.google.com/webstore/detail/bppopebgnjajocjnjlginjfpjbleappc)
 
 ## Local Installation
 
