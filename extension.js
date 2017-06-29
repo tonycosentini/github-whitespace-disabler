@@ -1,14 +1,12 @@
-function interceptRequest(request) {
-	if (!endsWith(request.url, '?w=1')) {
-		return {redirectUrl: request.url + '?w=1'}
-	}
-}
-
 chrome.webRequest.onBeforeRequest.addListener(
-  interceptRequest, 
-  { urls: [ '*://github.com/*/commit/*', '*://github.com/*/pull/*', ] },
-  ['blocking']);
+  function(request) {
+	var url = new URL(request.url);
+	
+	if ( ! url.searchParams.has('w')){
+		url.searchParams.set('w', 1);
 
-function endsWith(str, suffix) {
-    return str.indexOf(suffix, str.length - suffix.length) !== -1;
-}
+		return {redirectUrl: url.href};
+	}
+  },
+  { urls: [ '*://github.com/*/commits/*', '*://github.com/*/pull/*/files'] },
+  ['blocking']);
