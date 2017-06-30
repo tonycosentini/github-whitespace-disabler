@@ -12,7 +12,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 		urls: [
 			'*://github.com/*/commits/*',
 			'*://github.com/*/pull/*/files',
-			'*://github.com/*/compare/*'
+			'*://github.com/*/compare/*...*:*'
 		]
 	},
 	['blocking']
